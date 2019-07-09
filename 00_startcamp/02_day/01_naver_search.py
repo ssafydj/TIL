@@ -7,3 +7,7 @@ names = soup.select(#PM_ID_ct > div.header > div.section_navbar > div.area_hotke
 
 for name in names: 
 print(names.text))
+
+
+# 두번째 커밋을 위한 주석
+# 다시 한번 해보자
