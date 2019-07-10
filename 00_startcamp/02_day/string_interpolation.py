@@ -5,5 +5,3 @@ c = 'three'
 
 print(f'{a}, {b}, {c}')
 
-
-
