@@ -26,5 +26,3 @@ with open('ssafy.txt', 'w') as f:
 # \\ : \ 기능
 # \' : '
 # \" : "
-
-
