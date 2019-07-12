@@ -1,0 +1,37 @@
+{
+    'update_id': 913163043, 
+    'message': {
+        'message_id': 11, 
+        'from': {
+            'id': 622304220, 
+            'is_bot': False, 
+            'first_name': 
+            'Seunghyun', 
+            'last_name': 
+            'Lee', 
+            'language_code': 'ko'
+        }, 
+        'chat': {
+            'id': 622304220, 
+            'first_name': 'Seunghyun', 
+            'last_name': 'Lee', 
+            'type': 'private'}, 
+        'date': 1562897839, 
+        'text': '라마바'
+    }
+}
+
+{
+    'message': {
+        '@type': 'response', 
+        '@service': 'naverservice.nmt.proxy', 
+        '@version': '1.0.0', 
+        'result': {
+            'srcLangType': 'ko', 
+            'tarLangType': 'en', 
+            'translatedText': 'apple'}
+        }
+
+
+}
+  
