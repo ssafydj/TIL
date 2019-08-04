@@ -1,7 +1,7 @@
 div {
   width: 100px;
   height: 100px;
-  color: white;
+  color: yellowgreen;
   background-color: crimson;
   text-align: center;
   line-height: 100px;
@@ -25,5 +25,5 @@ div {
 }
 
 .opacity {
-  opacity: 0.5;
+  opacity: 0.3;
 }

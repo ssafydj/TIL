@@ -2,7 +2,7 @@ div {
   color: white;
   width: 100px;
   height: 100px;
-  background-color: grey;
+  background-color:blueviolet;
 }
 
 .margin {
@@ -18,11 +18,12 @@ div {
 }
 
 .border {
-  border-width: 5px;
+  border-width: 10px;
   border-style: dotted;
   border-color: red;
   border-top-color: blue;
-  border-radius: 20px;
+  border-bottom-color: yellow;
+  border-radius: 40px;
   /* shorthand  border: 5px dotted red */
 }
 
@@ -83,3 +84,7 @@ test {
 .border-box{
   box-sizing: border-box;
 }
+
+/* border:  border 기준이므로 padding이 늘어나도 
+일정 넓이(설정하는 크기에 따라 다름)까지는 깨지지않음
+따라서 border box를 기본값으로 설정하고 시작해라! */
