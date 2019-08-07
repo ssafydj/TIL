@@ -9,7 +9,7 @@
 }
 
 .small-box {
-  width: 100px;s
+  width: 100px;
   height: 100px;
 }
 
@@ -55,5 +55,22 @@
 
   /* 큰 사각형 내부의 좌측 상단 모서리로 옮기기*/
 }
+
+#purple {
+  background-color: purple;
+  position: relative;
+  top: 100px;
+  left: 100px;
+  /* 초록 사각형의 우측 하단 모서리에 보라 사각형 좌측 상단 모서리 맞대기 */
+}
+
+#orange {
+  background-color: orange;
+  position: relative;
+  bottom: 400px;
+  right: 100px;
+  /* 파란 사각형 오른쪽 위 모서리에 오렌지 사각형 좌측 하단 모서리 맞대기 */
+}
+
 
 /* absolute: 부모를 '기준'으로 */
