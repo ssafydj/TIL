@@ -59,3 +59,10 @@ nav {
   border: 1px solid black;
   padding: 30px 0;
 }
+
+.aside-left a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  /* 마우스 겹쳤을 때 밑줄x */
+}

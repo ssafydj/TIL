@@ -1,0 +1,72 @@
+.container {
+  height: 500px;
+}
+
+.header {
+  background-color: dimgray;
+  color: white;
+  height: 15%;
+  text-align: center;
+  line-height: 75px;
+}
+
+.aside-left {
+  background-color: crimson;
+  color: white;
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+
+.section {
+  background-color: lightskyblue;
+  float: left;
+  width: 60%;
+  padding: 10px;
+}
+
+.aside-right {
+  background-color: darkorange;
+  float: left;
+  width: 20%;
+  text-align: center;
+
+}
+
+.footer {
+  background-color: dimgray;
+  color: white;
+  clear: both;
+  height: 10%;
+  text-align: center;
+  line-height: 50px;
+}
+
+/* float로 block 속성을 없앰 */
+
+.aside-left a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  /* 마우스 겹쳤을 때 밑줄x */
+  padding: 16px;
+}
+
+.aisde-left,
+.section,
+.aside-right {
+  height: 75%
+}
+
+.aside-left a:hover {
+  background-color:darkgrey;
+  color: black;
+}
+
+.aside-right li {
+  list-style-type: none;
+}
+
+.aside-right ul {
+  padding: 0;
+}
