@@ -17,13 +17,10 @@ body {
 
 .bg-box {
   height: 100%;
-
   background-image: url("images/someone\ who\ code.jpg");
-
   background-size: 600px 450px;
   background-size: contain;
   background-size: cover;
-
 
   /* background-repeat */
   background-repeat: no-repeat;
@@ -31,16 +28,5 @@ body {
   /* background-position */
   background-position: 0, 0;
   background-position: center;
-
   background-attachment: fixed;
-
-}
-.moto {
-  background-color: white;
-  color: lightslategrey;
-  font-size: 200%;
-  font-family: 'Times New Roman', Times, serif;
-  text-align: center;
-  height: 50%;
-  
 }

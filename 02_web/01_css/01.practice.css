@@ -1,21 +1,34 @@
-.a {
-  height: 10vw;
-  width: 10vw;
-  background-color: red;
-}
-
-.b {
-  height: 20vh;
-  width: 20vh;
-  background-color: black;
-}
-
-ul,
-ul, li {
-  font-size: 12rem
+html {
+  font-size: 20px;
 }
 
 ol,
-ol, li {
-  font-size: 12em
+ol li {
+  font-size: 1.2rem;
+}
+
+ul,
+ul li {
+  font-size: 1.2em;
+}
+
+.vw {
+  font-size: 10vw;
+}
+
+.vh {
+  font-size: 10vh;
+}
+
+.div-vh {
+  height: 20vh;
+  width: 10vw;
+  background-color:green;
+}
+
+.div-vw {
+  height: 10vh;
+  width: 20vw;
+  background-color: blue;
+
 }

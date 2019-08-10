@@ -22,8 +22,8 @@
 }
 
 .font-5 {
-  /* fontshorthand */
-  /* font: font-style font-weight line-height font-size(필수) font-family(필수)  */
+  /* fontshorthand 
+  font: font-style font-weight line-height font-size(필수) font-family(필수)  */ */
   font: italic 2rem "Hack"
 }
 
@@ -41,8 +41,8 @@
   line-height: 100px;
 }
 
-.web-font {
-  font-family: 'Dokdo', cursive;
+.google-font {
+font-family: 'Dokdo', cursive;
 font-family: 'Gugi', cursive;
 font-family: 'Jua', sans-serif;
 font-family: 'Kirang Haerang', cursive;

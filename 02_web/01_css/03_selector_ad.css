@@ -27,7 +27,8 @@ div {
 
 /* 자식 선택자 */
 ol > li {
-  color: darkgreen;
+  color: red;
+  font-size: 30px;
 }
 
 ol#chocolate > li {

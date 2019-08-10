@@ -16,7 +16,7 @@
 
    + 속성명들은 모두 붙혀서 작성한다.(no space)
 
-2.  속성 값에는 반드시 '큰 따옴표'를 사용
+2.  속성 값에는 반드시 "큰 따옴표"를 사용
 
 3. 태그, 속성, 속성값 등에는 모두 소문자만 사용한다.
 
@@ -52,7 +52,7 @@
 >
 > 카카오톡: x
 
-chrome extetion: web developer (톱니바퀴) 설치
+chrome extention: web developer (톱니바퀴) 설치
 
 
 

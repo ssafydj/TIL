@@ -24,7 +24,7 @@ div {
   border-top-color: blue;
   border-bottom-color: yellow;
   border-radius: 40px;
-  /* shorthand  border: 5px dotted red */
+  /* shorthand  border: 10px dotted red */
 }
 
 .margin-shorthand-1{
