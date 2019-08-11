@@ -34,6 +34,7 @@
           <th>수</th>
         </tr>
       </thead>
+  </table>
       
   <thead></thead>
   <tbody></tbody>

@@ -34,30 +34,33 @@ nav {
   background-color: green;
   display: flex;
   justify-content: space-between;
-  /* nav 의 요소를 좌우로 나눔 */
+  /* 왼쪽에 몰려있는 nav 요소를 좌우로 나눔 */
   align-items: center;
 }
 
 
 .items {
   display: flex;
+  /* li 값을 상하->좌우 */
 }
 
 .items > li {
   list-style-type: none;
     margin: 0 20px;
+    /* ul의 bullet을 없애고 */
 }
 
 .main {
   display: flex;
   height: 100%;
+  line-height: 100%
 
 }
 
 .article {
   background-color: orange;
   border: 1px solid black;
-  padding: 30px 0;
+  padding: 40px 0;
 }
 
 .aside-left a {

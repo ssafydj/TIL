@@ -46,7 +46,7 @@ CDN: 별도의 파일을 다운로드 할 필요없이  link를 통해 데이터
         width: 500px;
         height: 300px;
       }
-    </style>
+  </style>
   ```
 
   

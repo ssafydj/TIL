@@ -1,0 +1,16 @@
+div{
+  background-color: green;
+  height: 100px;
+}
+
+footer {
+  margin-top: auto;
+  bottom: 0;
+  height: 100px;
+  width: 100px;
+  background-color:red;
+}
+
+.items{
+  list-style-type: none;
+}

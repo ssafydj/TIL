@@ -26,7 +26,9 @@ Example)
 infinite bounce -> rubberBand 등 원하는 걸로 바꿔서 사용
 ```
 
-## FlexBox
+## FlexBox > 항상 display: flex; or d-flex와 같이 사용
+
+- flex diction/wrap
 
 ```
 display: flex; 기본값 
@@ -37,17 +39,106 @@ flex-direction: row / row-reverse / column / column-reverse  = 가로 세로 역
 flex-wrap: nowrap / wrap / wrap-reverse = 넘치면 다음 줄로 넘어감
 ```
 
+- 부모 요소인 .cointainer에 값 설정
+
+```html
+부모 값인 .container에 값을 그룹 선택자로 적용해야 자식 요소인 모든 items에 적용된다
+
+.container {
+  height: 100vh;
+  border: 10px solid black;
+  display: flex;
+}
+
+<div class="container p-0">
+		<div class="item item1">1</div>
+		<div class="item item2">2</div>
+		<div class="item item3">3</div>
+		<div class="item item4">4</div>
+		<div class="item item5">5</div>
+		<div class="item item6">6</div>
+		<div class="item item7">7</div>
+		<div class="item item8">8</div>
+		<div class="item item9">9</div>
+		<div class="item item10">10</div>
+</div>
+```
+
+- flex grow
+
+  ```html
+  남는 좌우 여백을 5등분해서 지정한 클래스에 지정한 값 만큼 각각 나눠준다.
+  (default = flex-grow: 0;)
+  
+  .items2 {
+  flex-grow: 2;
+  }
+  
+  .items3 {
+  flex-grow: 3;
+  }
+  ```
+
+- justify-content(가로축 조정)
+
+```
+justify-content: flex-start; -> 왼쪽정렬(default)
+justify-content: flex-end; -> 오른쪽정렬
+justify-content: center -> 가운데정렬
+justify-content: space-between; -> 왼끝/중앙/오끝
+justify-content: space-around; -> 여백 1221
+justify-content: space-evenly; -> 여백 1111
+```
+
+- align-items(세로축 조정)
+
+```
+align-items: stretch;  -> 위아래 꽉차게(default)
+align-items: flex-start;  -> 상단 정렬
+align-items: flex-end;  -> 하단 정렬
+align-items: center;  -> 가운데 정렬
+align-items: baseline;  -> item의 상단에서 text 기준으로 줄 맞추기
+```
+
+- 개별 단위 움직임: align-self
+
+```
+.item8{
+  align-self:flex-end;
+}
+
+.tiem5{
+  align-self:center;
+}
+```
+
+```
+주의사항: direction-reverse 하는 순간, justify = y축, align = x축으로 사용된다.
+x, y축으 바꿔서 지시해야한다.
+```
 
 
 
+- 순서지정 order
 
-*container: 부모(상위 요소)
+```
+default = order:0
+숫자가 작을수록 왼쪽으로 이동
 
-*flex items: 자식
+.item2 {
+   order: 1;
+}
 
- (정해진 이름은 아님)
+.item3 {
+   order: -1;
+}
 
+.item5 {
+   order: -2;
+}
 
+왼쪽부터 순서 5<3________<2
+```
 
 nav, aside, section, footer 등 <u>큰 틀</u>은 grid로 작성,
 
@@ -55,23 +146,5 @@ nav, aside, section, footer 등 <u>큰 틀</u>은 grid로 작성,
 
 
 
-```
-<u>x축 justify</u>  w/ content
 
-<u>y축 align</u> w/ items or self
-
-
-
-한줄 items
-
-여러줄 content
-
-개별요소 self
-
--> <u>조합</u>해서 사용하면 된다.
-
-
-
-!! direction 을 reverse 하는 순간, justify = y축, align = x축으로 사용된다.
-```
 

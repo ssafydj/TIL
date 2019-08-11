@@ -29,7 +29,7 @@ blue, 15px = 값
   3.link file(.css 파일만들어서 link로 연결)
   <link rel="stylesheet" href="00_intro.css">
   .css 파일에 
-  1 {
+  h1 {
   color: blue;
   font-size: 10px;
   }
@@ -39,7 +39,7 @@ blue, 15px = 값
 - 프로퍼티의 값
 
   ```html
-  1. 키워드 = display, font, 
+  1. 키워드 = display, font, text, 
   
   2. 크기단위
   > px = 디바이스 마다 상대적
@@ -131,7 +131,7 @@ blue, 15px = 값
   
   2. inline
   ex)span, a, img, button input...
-  반드시 text가 필요하다 (content(text) 너비만큼 width를 차지)
+  반드시 text가 필요하다 (content/text 너비만큼 width를 차지)
   새로운 라인에서 시작하지 않고, 문장의 중간에 들어갈 수 있다.
   width, height, margin 등 설정 못한다.
   상/하 여백은 line-height로 지정한다
@@ -174,7 +174,7 @@ blue, 15px = 값
   }
   
   <html>
-  <h2 class="google-font">세 시간 전 항구에서 출발한 배를 안개가 감쌌다.</h2>
+  <p class="google-font">세 시간 전 항구에서 출발한 배를 안개가 감쌌다.</p>
   
   **fontshorthand 
   font: font-style font-weight line-height font-size(필수) font-family(필수)  
@@ -200,6 +200,7 @@ blue, 15px = 값
   
   3. position: absolute(절대위치)
   static을 제외하고, position: relative; absolute; fixed; 로 선언된 부모 or 가장 가까이 있는 조상을 기준으로 top, bottom, left, right만큼 이동한다. 
+  
   .parent {
   position: relative;
   }
@@ -209,6 +210,11 @@ blue, 15px = 값
   top: 50px;
   left: 50px;
   }
+  >.parent 를 기준으로 top: 50px left: 50px 이동한다. 
+  
+  a. 모든 부모가 static -> 부모인 position: static 위치를 기준으로 움직임
+  b. 조상 중에 static이 아닌 가장 가까운 부모가 있을 때 -> 그 부모를 기준으로 움직임
+  c. 자기의 부모나 조상이 움직이면 같은 거리 따라 움직인다.
   
   4. position: fixed(고정위치)
   부모 요소와 관계없이 브라우저의 viewport를 기준으로 위치를 이동시킨다.
@@ -217,6 +223,24 @@ blue, 15px = 값
   position:fixed;
   bottom:0;
   right:0;
+  }
+  ```
+
+- float
+
+  ```
+  요소를 다음 요소 위에 떠 있게 한다.
+  
+  .float-left {
+    float: left;
+  }
+  
+  .float-right {
+   float: right;
+  }
+  
+  .clear {
+   clear: left/right/both;
   }
   ```
 
@@ -268,7 +292,7 @@ blue, 15px = 값
 
   
 
-- 그룹/자식/ 자손 선택자 (컴포넌트화 = 공통되는 부분은 하나로 묶고, 다른부분은 각각 설정 )
+- 그룹/자식/ 자손 선택자 (컴포넌트화 = 공통되는 부분은 하나로 묶고, 다른부분은 각각 따로 설정 )
 
 ```
 그룹 선택자 = 모든 div에 같은 기본값을 줄 때 or 다른 태그에 같은 기본값을 줄 때
@@ -306,7 +330,7 @@ font-size: 10px;
 </div>
 </ul>
 
-*조상 선택자인 ul 중간에 공백을 두면 조상 선택자 이하에 모든 부모, 후손 셀렉터에 lime 색이 적용된다.
+*조상 선택자인 ul 중간에 공백을 두면 조상 선택자 이하에 (깊이에 상관없이) 모든 부모, 후손 셀렉터에 lime 색이 적용된다.
 ul li {
 color: lime;
 }
