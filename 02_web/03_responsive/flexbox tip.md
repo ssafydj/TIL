@@ -28,11 +28,11 @@ infinite bounce -> rubberBand 등 원하는 걸로 바꿔서 사용
 
 ## FlexBox > 항상 display: flex; or d-flex와 같이 사용
 
-- flex diction/wrap
+- flex direction/wrap
 
 ```
 display: flex; 기본값 
->>flex-direction: row; flex wrap: nowrap 
+>>flex-direction: row; flex wrap: nowrap;
 = flew-flow: row nowrap;
 
 flex-direction: row / row-reverse / column / column-reverse  = 가로 세로 역방향

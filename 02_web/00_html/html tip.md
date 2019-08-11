@@ -29,7 +29,7 @@
       <thead>										
         <tr>										# table row 가로열(행)	
           <th></th>								
-          <th>월</th>								#table head(열) (bold 처리)
+          <th>월</th>							#table head(열) (bold 처리)
           <th>화</th>									=td=table data
           <th>수</th>
         </tr>

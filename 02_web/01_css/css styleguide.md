@@ -1,14 +1,10 @@
-### CSS = HTML에 디자인을 적용
-
-
-
 ## css 스타일 가이드
 
 기준: https://ui.toast.com/fe-guide/ko_HTMLCSS
 
 1. 들여쓰기 2문자
 
-2. 클래스, 아이디명은 케밥 케이스(kebob-case)
+2. 클래스, 아이디명은 케밥 케이스(kebob-case) -> - 하이픈으로 단어를 연결
 
 3. 콜론 이후에는 공백
 
@@ -21,8 +17,6 @@
      font-weight: bold;
    }
    ```
-
-    
 
 5. 모든 스타일 뒤에는 세미콜론;을 붙인다.
 

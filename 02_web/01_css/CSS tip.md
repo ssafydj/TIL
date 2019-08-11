@@ -1,7 +1,10 @@
 - CSS 기본 사용법
 
 ```css
-h1{color:blue;font-size:15px;}
+h1{
+    color:blue;
+    font-size:15px;
+}
 
 color, font-size = 프로퍼티
 blue, 15px = 값
@@ -148,10 +151,10 @@ blue, 15px = 값
   visible = 해당 요소를 보이게 한다.(default)
   hidden = 해당 요소를 안보이게 한다.
   
-   - display:none vs visibility:hidden 
+   - display:none; vs visibility:hidden; 
    none은 공간조차 없이 사라지고, hidden은 사라지지만 공간은 유지된다.
   
-  5-1. .opcaity {
+  5-1. .opacity {
   opacity: 0~1;   		#숫자가 낮을수록 흐려짐
   }
   ```

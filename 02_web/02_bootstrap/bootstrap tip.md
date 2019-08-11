@@ -34,7 +34,7 @@ CDN: 별도의 파일을 다운로드 할 필요없이  link를 통해 데이터
 * <u>이미 bootstrap에 만들어진 class name 을 자유롭게 활용하면 된다.</u>
 
   ```
-  .css 파일이 따로 필요없으므로, <head>에 <style>형식으로 자주쓰는 div, img 등 틀을 만들어서 사용하면 된다.
+  .css 파일이 따로 필요 없으므로, <head>에 <style>형식으로 자주쓰는 div, img 등 틀을 만들어서 사용하면 된다.
   
   <style>
       div {
@@ -69,6 +69,7 @@ padding-top/bottom:0  .py-0 패딩 상하(y축)0
 ## 브라우저 기본 rem은 16px 
 ## spacer(1rem)*0.25 = 16px*0.25 = 4px 
 
+.mt-0   					0
 .mt-1   margin-top:0.25rem  4px
 .mt-2	margin-top:0.5rem	8px
 .mt-3						16px
@@ -106,7 +107,7 @@ etc...
 .d-inline-block
 .d-none
 
-##display 응용
+##display 응용***
 <!-- div는 원래 block 이지만, inline 으로 만들 수 있다 -->
   <div class="d-inline bg-primary text-white">div to inline</div>
   
@@ -119,7 +120,7 @@ etc...
 .position-absolute
 .position-fixed
 
-<!-- position fixed =sticky-->
+<!-- position fixed =sticky-->***
 <style>
  .sticky {
   width: 100%;
@@ -164,7 +165,7 @@ image 파일을 불러와서 .rounded-circle/pill로 모서리를 깍아서 사�
         line-height: 200px;
       }
     </style>
-  <div class="square col-1">1개당 12칸을 잡음 = 12덩이</div>
+  <div class="square col-1">1개당 1칸을 잡음 = 12덩이</div>
   <div class="square col-2">1개당 2칸을 잡음 = 6덩이</div>
   <div class="square col-3">1개당 3칸을 잡음 = 4덩이</div>
   <div class="square col-4">1개당 4칸을 잡음 = 3덩이</div>
