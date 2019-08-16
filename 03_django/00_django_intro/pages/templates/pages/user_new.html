@@ -1,0 +1,17 @@
+{% extends 'base.html' %}  
+
+{% block content %}
+<form action="/pages/user_create/" method="post">
+{% comment %} post 방식에서는 /양쪽 슬래쉬 필수/ {% endcomment %}
+  {% csrf_token %}
+{% comment %} django가 매번 갱신되는 csrf token hash를 발행한다. 따라서 form data에 지정한 변수 name과 pwd 이외에 token 값도 같이 넘어간다{% endcomment %}
+  {% comment %}반면에 django 는 위의 한 줄로 이 과정을 끝낼 수 있음  {% endcomment %}
+  <label for="name">아이디</label>
+  <input type="text" id="name" name="name"><br>
+  <label for="pwd">패스워드</label>
+  <input type="password" id="pwd" name="pwd">
+  {% comment %} id=name 과 id=pwd 를 통해서 user_create.html 에서 값에 접근한다. {% endcomment %}
+  <input type="submit" value="가입">
+  
+</form>
+{% endblock  %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}  
+
+{% block content %}
+<form action="/pages/catch/" method="GET">
+  <label for="">THROW</label>
+  {% comment %} label 기능: label을 눌러도 텍스트로 연결 {% endcomment %}
+{% comment %} 각 사이트마다 다른 method 방식 {% endcomment %}
+  <input type="text" id="message" name="message">
+  {% comment %} name으로 접근한다. {% endcomment %}
+  <input type="submit">
+</form>
+{% endblock  %}

@@ -49,19 +49,20 @@
   ```
   # 항상 vs code로 django 시작할 때 
   
+  ```
+
 vs code 에서 F1켜서  python: select interpreter에서 3.7 venv: venv로 변경
-  
+
 ![1565743550743](C:\Users\student\AppData\Roaming\Typora\typora-user-images\1565743550743.png)
-  
+
   vs code 좌하단에 이 표시가 없으면 <u>가상환경에 접속</u> 안한것이다.<>global 
-  
+
   (terminal에서 pip list로 가상환경에 위치하고 있는지 다시 확인)
   ```
   
   pip install django  (장고 설치)
   
-  python -m django --version (version 확인)
-  
+  (python -m django --version (version 확인))
   
   
   django-admin startproject django_intro .   ( .설정해서 불필요하게 2중폴더 만들지말자!)
@@ -69,7 +70,7 @@ vs code 에서 F1켜서  python: select interpreter에서 3.7 venv: venv로 변�
   
 
   python manage.py runserver (설치시 위치 주의) 
-
+	
   (student@DESKTOP MINGW64 ~/Desktop/TIL/03_django/00_django_intro (master)에서 설치)
 
   
@@ -85,14 +86,16 @@ vs code 에서 F1켜서  python: select interpreter에서 3.7 venv: venv로 변�
   
   > > > python manage.py startapp pages
   
+
 project 폴더 안에 setting.py에 install_appes 에 필요한 클래스를 등록해준다.
-  
-​```
+
+```
    'pages.apps.PagesConfig',
 ​```
-  
+```
+
 setting.py 하단에서 language code를 'ko-kr'
-  
+
 ​								Time-zone을 	'Asia/Seoul'로 변경
   ```
 
@@ -154,7 +157,7 @@ url말고 view 먼저 짜는 이유: url 짤 때  views를 연결할 index를 �
 
   - vs code 설정 (setting.json에)
 
-    ```
+  ```
     1. django
     extension 에서 django 설치 > repository 가서
         "files.associations": {
@@ -181,8 +184,51 @@ url말고 view 먼저 짜는 이유: url 짤 때  views를 연결할 index를 �
     
     붙이기
     ```
-
     
+    ```python
+## setting,json 준호쌤 설정으로 덮어쓰자
+
+{
+  "terminal.integrated.cwd": "${workspaceFolder}",
+  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+  "window.zoomLevel": 4,
+  "editor.fontFamily": "Hack, Fira Code, Consolas, 'Courier New', monospace",
+  "editor.suggestLineHeight": 24,
+  "editor.fontLigatures": true,
+  "files.insertFinalNewline": true,
+  "[html]": {
+    "editor.tabSize": 2
+  },
+  "[css]": {
+    "editor.tabSize": 2
+  },
+  "[django-html]": {
+    "editor.tabSize": 2
+  },
+  // beautify
+  "beautify.language": {
+    "js": {
+      "type": ["javascript", "json"],
+      "filename": [".jshintrc", ".jsbeautifyrc"]
+      // "ext": ["js", "json"]
+      // ^^ to set extensions to be beautified using the javascript beautifier
+    },
+    "css": ["css", "scss"],
+    "html": ["htm", "html", "django-html"]
+    // ^^ providing just an array sets the VS Code file type
+  },
+  // django
+  "files.associations": {
+    "**/*.html": "html",
+    "**/templates/**/*.html": "django-html",
+    "**/templates/**/*": "django-txt",
+    "**/requirements{/**,*}.{txt,in}": "pip-requirements"
+  },
+  "emmet.includeLanguages": {"django-html": "html"},
+}
+    ```
+
+
 
 - 동적 라우팅  -> 주소자체를 변수처럼 사용 request 이외에 다른 변수가 필요
 
