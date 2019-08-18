@@ -9,10 +9,11 @@ urlpatterns = [
     path('result/', views.result),#항상 트레일링 컴마 , 를 붙이는 습관
     path('image/', views.image),
     path('hello/<name>', views.hello),
-    path('times/<int:num1>/<int:num2>', views.times),
-    path('area/<int:r>', views.area),
+    path('times/<int:num1>/<int:num2>/', views.times),
+    path('area/<int:r>/', views.area),
     path('template_language/', views.template_language),
     path('isitgwangbok/', views.isitgwangbok),
+    path('isbirth/', views.isbirth),
     path('throw/', views.throw),
     path('catch/', views.catch),
     path('art/', views.art),

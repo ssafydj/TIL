@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     # 1. local apps (pages.)
     # 2. Third party apps (beautifulsoup.)
     # 3. django apps (django.)
+    # 위 -> 아래로 작성
     'utilities.apps.UtilitiesConfig',
     'pages.apps.PagesConfig',
     'django.contrib.admin',

@@ -21,7 +21,8 @@ from django.urls import path, include
 urlpatterns = [    
     path('utilities/', include('utilities.urls')),
     path('pages/', include('pages.urls')),
-    # 최상위 프로젝트 폴더에 하위 폴더를 include
+    # 최상위 프로젝트 폴더에 하위 폴더를 include해서 각 하위폴더가 직접 url 관리하고
+    # 최상위 프로젝트 폴더는 하위 폴더에 처음 접근만을 관리
     # app 이름 + url ex) 127.0.0.1:8000/pages/index/ 로 바뀜
     path('admin/', admin.site.urls),  #항상 트레일링 컴마 , 를 붙이는 습관
 ]

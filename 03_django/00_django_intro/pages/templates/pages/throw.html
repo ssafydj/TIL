@@ -2,11 +2,12 @@
 
 {% block content %}
 <form action="/pages/catch/" method="GET">
+{% comment %} 이 form을 /pages/catch로 연결한다 {% endcomment %}
+{% comment %} method="GET" = default {% endcomment %}
   <label for="">THROW</label>
-  {% comment %} label 기능: label을 눌러도 텍스트로 연결 {% endcomment %}
 {% comment %} 각 사이트마다 다른 method 방식 {% endcomment %}
   <input type="text" id="message" name="message">
-  {% comment %} name으로 접근한다. {% endcomment %}
+  {% comment %} id를 통해서 catch에 접근한다. {% endcomment %}
   <input type="submit">
 </form>
 {% endblock  %}

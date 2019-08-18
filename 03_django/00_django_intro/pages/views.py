@@ -78,6 +78,16 @@ def isitgwangbok(request):
     return render(request, 'pages/isitgwangbok.html', context)
 
 
+def isbirth(request):
+    today = datetime.now()
+    if today.month == 8 and today.day == 17:
+        result = True
+    else:
+        result = False
+    context = {'result': result,}
+    return render(request, 'pages/isbirth.html', context)
+
+
 def throw(request):
     return render(request, 'pages/throw.html')
 
@@ -87,12 +97,13 @@ def catch(request):
     # pprint(request.scheme)
     # pprint(request.path)
     # pprint(request.method)
-    # pprint(request.GET)   >get 을 쓰는 이유는 내부적으로 querydict 라는 dictionary 형태로 정보를 제공하므로
-    pprint(request.meta)
+    # pprint(request.GET)   
+    # > get 을 쓰는 이유는 내부적으로 querydict 라는 dictionary 형태로 정보를 제공하므로
+    # pprint(request.meta)
 
 
     message = request.GET.get('message')
-    # 딕셔너리에서 키 값 가져올 때 get('key 값')
+    # 딕셔너리에서 키 값 가져올 때 get을 사용한다.
     context = {'message': message,}
     return render(request, 'pages/catch.html', context)
 
@@ -106,7 +117,7 @@ def result(request):
     word = request.GET.get('word')
     # ctrl C 로 서버 끄고 pip install requests 필요 import 도
     # 그냥 쓸 수 없으니 word라는 변수에 담는다.
-    # 2. ARTII API 폰트 리스트로 요청을 보내 응답을 text로 받는다.
+    # 2. ARTII API 폰트 리스트로 요청을 보내 응답을 text 형태로 받는다.
     fonts = requests.get('http://artii.herokuapp.com/fonts_list').text
     # 3. str 을 list로 바꾼다
     fonts = fonts.split('\n')
@@ -125,9 +136,9 @@ def user_new(request):
     return render(request, 'pages/user_new.html')
 
 def user_create(request):
-    name = request.POST.get('name') 
+    name = request.POST.get('name')   #post = method의 post / get = 딕셔너리에서 value 값을 가져오는 get
     pwd = request.POST.get('pwd')
-    context = {'name': name, 'pwd': pwd,}
+    context = {'name': name, 'pwd': pwd,}  #출력값만 보기위해서 쓰여진 코드, 실제 보안코드를 출력해서는 안된다.
     return render(request, 'pages/user_create.html', context)
 
 
