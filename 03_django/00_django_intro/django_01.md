@@ -1,13 +1,13 @@
-## python을 잘해야 django를 잘 사용한다.  
 
-기본목적: template(.html) 을 사용자에게 보여주기위함. > 가능한 모든 계산 및 처리는 views에서 한다.
 
 ## django = web application tool / 서버
 
-  ```
- framework 기본구조/패턴: <u>MVC</u> (model view controler) contoler가 model에 접근하고 view에 뿌려주고  
+기본목적: template(.html) 을 사용자에게 보여주기위함. > 가능한 모든 계산 및 처리는 views에서 한다.
 
-  실행순서: urls>view>template>user 
+  ```
+ framework 기본구조/패턴: <u>MVC</u> (model view controler) contoler가 model(data)에 접근하고 view에 뿌려주고  
+
+  실행순서: urls>view>template to user 
 
   플라스크의 기능을 하나하나 독립시킨 개념
 
@@ -30,7 +30,7 @@
 
 url말고 view 먼저 짜는 이유: url 짤 때 views를 연결할 index를 먼저 만들고 url을 입히는게 나아서.
   ```
-- Django Template Language(DTL)
+- Django Template Language(DTL)  > {$___$} 
   - django template 에서 사용하는 내장 template system 이다.
   - 조건, 반복, 변수, 치환, 필터 등 많은 기능을 제공한다.
 
