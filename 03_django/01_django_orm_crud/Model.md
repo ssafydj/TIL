@@ -196,7 +196,7 @@ ORM_tablename 으로 테이블이 만들어짐
 
 ```
 1. migrations
-> $ python mange.py makemigrations = 모델(model.py)을 작성/변경한 사항을 django 에 알리는 작업
+> $ python manage.py makemigrations = 모델(model.py)을 작성/변경한 사항을 django 에 알리는 작업
 ```
 
 ### 추가사항
@@ -216,16 +216,8 @@ $ python manage.py showmigrations
 ### Model *****변경 시 *작성 *순서 
 
 1. models.py: 작성 및 변경(생성/수정하는 공간)
-2. makemigrations: migrations 파일 만들기(설계도 작성)
-3. migrate: 실제 DB에 적용 및 동기화(테이블이 생성됨)
-
-```
-수정이 필요하다면, 
-
-1. migrations에 0001/0002 등 번호붙은 설계도를 지운다.
-2. db.sqlite 3 도 지운다.
-3. 위의 순서대로 다시 작성한다.
-```
+2. makemigrations: migrations 파일 만들기(설계도 작성) > python manage.py makemigrations
+3. migrate: 실제 DB에 적용 및 동기화(테이블이 생성됨) > python manage.py migrate
 
 ---------------------
 
@@ -249,37 +241,47 @@ $ python manage.py showmigrations
    > pip install ipython 설치 (shell 시각화(컬러링) 용도)
 
    - shell 켤 때  -> python manage.py shell
-   - from articles.models.py import Article
+   - from articles.models import Article             articles = app 이름 // Article = class 변수이름
    - Article.objects.all()
 
    
 
+   #### admin 설정
+   
+   > python manage.py createsuperuser
+   
+
+   
+   
+   
    - 테이블 내용을 전부 조회(READ)
      - DB 에 쿼리를 날려서 인스턴스 객체 전부를 달라고 하는 뜻
-     - 만약에 레코드가 하나라면, 인스턴스 단일 객체로 반환
+  - 만약에 레코드가 하나라면, 인스턴스 단일 객체로 반환
      - 두 개 이상이면, QuerySet 형태로 반환
 
    >  (ORM)Article.objects.all()  > 사용자가 작성하는 내용 (READ 할 떄 쓰는 ORM 문법)
-   >
+>
    > == 
    >
    > (SQL)SELECT*FROM articles_article;  > DB가 이해하는 내용
 
    
 
-   ## 1. CREATE
+## 1. CREATE
 
-   - QuerySet 기본 개념
+- QuerySet 기본 개념
      - 전달 받은 객체의 목록
-       - QuerySet: 쿼리 set 객체
+    - QuerySet: 쿼리 set 객체
+       
        - Query: 단일 객체
      - DB 로부터 데이터를 읽고, 필터를 걸거나 정렬 등을 수행
-     - Query 를 던지는 Language(django ORM) 를 활용해서 DB에게 데이터에 대한 조작을 요구한다.
-
-    
-
+    - Query 를 던지는 Language(django ORM) 를 활용해서 DB에게 데이터에 대한 조작을 요구한다.
+       
+   
+      
+   
    QuerySet
-
+   
    - Objects를 사용하여 **<u>다수의 데이터를 가져오는 함수를 사용할 때 반환되는 객체</u>**
    - 단일한 객체를 반환(return)할 때는 테이블(class)의 인스턴스로 반환된다.
 
