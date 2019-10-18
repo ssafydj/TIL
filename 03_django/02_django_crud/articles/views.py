@@ -14,21 +14,18 @@ def index(request):
     return render(request, 'articles/index.html', context)
     
 
-def new(request):
-    return render(request, 'articles/new.html')
-
-
 def create(request):
-    try:
+    # CREATE
+    if request.method == 'POST':
         title = request.POST.get('title')
         content = request.POST.get('content')
         article = Article(title=title, content=content)
         article.full_clean()   #유효성 검증 과정 , 이 과정이 없으면 blank=False 등 조건이 작동안함
-    except ValidationError:
-        raise ValidationError('Error')
-    else:
         article.save()
-    return redirect('/articles/')  
+        return redirect(article)
+    # NEW
+    else:
+        return render(request, 'articles/create.html')
 
 def detail(request, pk):
     article = Article.objects.get(pk=pk) # 앞에 pk 는 테이블의 컬럼 뒤에 pk는 위의 변수 pk /articles/pk 값으로 문서에 직접 접근
@@ -38,9 +35,11 @@ def detail(request, pk):
 
 def delete(request, pk):
     article = Article.objects.get(pk=pk)
-    article.delete()
-    return redirect('/articles/') #삭제 후 메인 페이지인 articles로 복귀
-
+    if request.method == 'POST':
+        article.delete()
+        return redirect('articles:index') #삭제 후 메인 페이지인 articles로 복귀
+    else:
+        return redirect(article)
 
 def edit(request, pk): # 수정할 대상 필요
     article = Article.objects.get(pk=pk) # 수정할 대상 1개를 선택
@@ -50,11 +49,15 @@ def edit(request, pk): # 수정할 대상 필요
 
 def update(request, pk):
     article = Article.objects.get(pk=pk)
+    if request.method =='POST':
+        article.title = request.POST.get('title')
+        article.content = request.POST.get('content')
+        article.save()
+        return redirect('articles:detail', article.pk)
+    else:
+         context = {'article': article,}
+         return redirect(article)
 
-    article.title = request.POST.get('title')
-    article.content = request.POST.get('content')
-    article.save()
-    return redirect(f'/articles/{article.pk}/')
     #페이지가 필요없으므로 redirect
 
 

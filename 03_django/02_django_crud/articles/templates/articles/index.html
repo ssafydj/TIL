@@ -2,18 +2,18 @@
 
 {% block content %}
 <h1 class="text-center">Articles</h1>
-<a href="/articles/new/">[NEW]</a>
+<a href="{% url 'articles:create' %}">[NEW]</a>
 <hr>
 {% for article in articles %} 
 <p>글 번호: {{ article.pk }}</p>
 <p>글 제목: {{ article.title }}</p>
 <p>글 내용: {{ article.content }}</p>
-<a href="/articles/{{ article.pk }}">[DETAIL]</a>
+<a href="{{ article.get_absolute_url }}">[DETAIL]</a>
+
 {% comment %} 
 for 문안에서 순서대로 pk 값을 가져오는
 {{ article.pk }} 뒤에 붙혀서,
 articles/pk 로 접근하게함  {% endcomment %}
 <hr>
 {% endfor %}
-
 {% endblock  %}

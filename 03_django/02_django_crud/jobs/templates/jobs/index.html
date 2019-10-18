@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>전생의 직업</h1>
+<p>당신 전생의 직업을 알려드려요</p>
+
+<form action="#" method="POST"></form>
+{% csrf_token %}
+  <label for="name">NAME</label>
+  <input type="text">
+{% endblock  %}
